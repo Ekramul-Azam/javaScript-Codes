@@ -1,1 +1,142 @@
+var str1=" this is a string";
+console.log(str1);
 
+
+console.log(str1.length);
+console.log(typeof(str1));
+console.log(str1.indexOf("i"));
+console.log(str1.lastIndexOf("i"));
+console.log(str1.replace("i","x"));
+
+
+// page-5
+var num1 = 2.45
+console.log(num1)// the value of 1.45 is the literal
+
+var answer = true;
+console.log(answer); // the value of true and false are boolean literal
+
+var str2 = String("this is a new simple string");
+console.log(str2); // primitive boolean
+var num2 = Number(1.32);
+console.log(num2); // Primitive number
+
+// To deliberately instantiate an object, use the hew operator
+
+var str3= new String("string");
+console.log(str3); // string object instance 
+
+var num3 = new Number(1.45);
+console.log(num3);  // number object instance 
+
+// Differences between a primitive and an object instance when you compare an object instance to a literal value using strict equality
+
+var s1 = String("string");
+var n1 = Number(1.45);
+var bool1 = Boolean(true);
+if(s1 === "string"){
+    console.log("equal");
+};
+
+if(n1 === 1.45){
+    console.log("equal");
+}
+if(bool1 === true){
+    console.log("equal")
+};
+
+
+var s2 = new String("String2");
+var n2 = new Number(1.45);
+var bool2 = new Boolean(true);
+
+if( s2 === "Stirng"){
+    console.log("equal")
+}else{
+    console.log("Not equal");
+};
+
+if( n2 === 1.45){
+    console.log('equal')
+}else{
+    console.log('Not equal')
+};
+
+if(bool2=== true){
+    console.log('equal')
+}else{
+    console.log('Not equal')
+};
+
+// Question : This is the list of the items  :
+// before : Cherries , limes, oranges, apples
+// after: ['Cherries', 'lime', 'oranges','apples'];
+
+// Solution
+var sentence = 'this is one sentence, this is a sentence with a list of items:' + 'Cherries, orrange, apples, bananas, That .was the list of items';
+var start = sentence.indexOf(':');
+console.log(start);
+var end = sentence.indexOf('.', start+1);
+console.log(end);
+var ind = sentence.lastIndexOf('.');
+console.log(ind);
+var listSrt = sentence.substring(start+1, end)
+console.log(listSrt)
+var fruits = listSrt.split(',');
+console.log(fruits);
+
+
+// Using the Regular Expression 
+var regUse = "this is not the time of waiting for anyone, this is the time for going ahead. this is the final approch to go your distanation."
+
+var repLace = /t\w{2}s/g;
+console.log(repLace)
+
+var replaceMent = regUse.replace(repLace,'that');
+console.log(replaceMent);
+
+
+var readPara = "Hey, I am going to learn Js . This is an amaiging subject. I am working hard Alhamdulilla. So I have to learn everyday in."
+
+var sentence = ' This is one sentence . This is a sentene with a list f items:' + 'cherries,    oranges, apples,    bananas.';
+
+var start = sentence.indexOf(":");
+var end = sentence.indexOf(".", start+1);
+var listStr = sentence.substring(start+1, end);
+console.log(listStr);
+
+var fruits = listStr.split(',');
+console.log(fruits);
+
+
+var para = "he, is, a .good, person";
+var newPara = para.split('.');
+console.log(newPara);
+// To remove all white spaces
+var fruits = listStr.split(/\s*,\s*/);
+console.log(fruits);
+
+
+var numb = new Number(2.54);
+console.log(numb) //object literal
+
+var numb2 = Number(2.54);
+console.log(num2)  // number literal
+
+var unknownVariable
+unknownVariable = 10 + 3
+if(typeof unknownVariable === "undefined" ){
+    console.log('it is undefined')
+}else if(typeof unknownVariable === 'number'){
+    console.log('10+3 is a number , that is ' + unknownVariable )
+}else if(typeof unknownVariable === 'string'){
+    console.log('10 is a string , that is ' + unknownVariable)
+}else{
+   console.log("It is Unknown")  
+};
+
+
+var numbe = "3,4,2,5,6,7";
+var newNu = numbe.split(',');
+
+console.log(newNu)
