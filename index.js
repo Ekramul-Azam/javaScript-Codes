@@ -1,22 +1,34 @@
-// You want to accept an input stirg with first ans last name, and swap the names so the last name is first.  আপনি প্রথম এবং শেষ নাম সহ একটি ইনপুট স্ট্রিং গ্রহণ করতে চান এবং নামগুলি অদলবদল করতে চান যাতে শেষ নামটি প্রথম হয়।
+var animals = new Array("cat","dog", "hen", "cat", "cow","elephant","horse","lion");
+console.log(animals.indexOf("elephant")); // 5
+console.log(animals.lastIndexOf("cat")); //3
 
-// Use capturing parentheses ans a regular expression to find and remember the two names in the string, and reverse them.
+console.log(animals);
+//remove an element from array
+// splice() method
+var remElem = animals.splice((animals.indexOf("cat"), 1))
+console.log(remElem)
 
-// var nam = "Ekramul Azam";
-// var ree = /^(\w+)\s(\w+)$/;
-// var newname = nam.replace(ree, "$2, $1");
-// console.log(newname);  //Azam, Ekramul
+// splice in new element
+ animals.splice(animals.lastIndexOf("cat"),3,"monkey","GOAT");
+ console.log(animals);
 
-document.getElementById('searchSubmit').onclick = function(){
-    // get pattern 
-    var pattern = document.getElementById("pattern").value;
-    var re = new RegExp(pattern, "g");
-    
-    // get string
-    var searchString = document.getElementById("incoming").value;
-    var resultString = searchString.replace(re, "<span class='found'> $& </span>");
+ console.log(animals.toString()); //monkey,GOAT
 
+// ading new array with concatination
+ let charSets = ["ab","ba","bc","cd","de", "ab","cd", "ee","cd"];
+ console.log(charSets)
+ let charSets2 = ["mm","nn"]
+ let charSets3 = charSets.concat(charSets2);
+ console.log(charSets3);
 
-    //insert into page
-    document.getElementById("searchResult").innerHTML = resultString;
-}
+ // replace element with splice method
+ while(charSets3.indexOf("cd") != -1){
+    charSets3.splice(charSets3.indexOf("cd"), 1,"##")
+ };
+ console.log(charSets3); //(11) ['ab', 'ba', 'bc', '##', 'de', 'ab', '##', 'ee', '##', 'mm', 'nn'];
+
+ // delete new element
+ while(charSets3.indexOf("##") != -1){
+    charSets3.splice(charSets3.indexOf("##"), 1)
+ }
+ console.log(charSets3); //(8) ['ab', 'ba', 'bc', 'de', 'ab', 'ee', 'mm', 'nn']
