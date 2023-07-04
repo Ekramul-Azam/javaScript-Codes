@@ -1,0 +1,25 @@
+var animals = new Array("cat","**","dog", "hen", "cat","**","**", "cow","elephant","horse","**","lion");
+console.log(animals.indexOf("elephant")); 
+
+//using filter method to filter elements
+var aniFilter = animals.filter(function(element){
+    return (element !== "**");
+})
+
+console.log(aniFilter);//(8) ['cat', 'dog', 'hen', 'cat', 'cow', 'elephant', 'horse', 'lion']
+
+// Validating array content
+
+function testValue (element, index, array){
+    var textExp = /^[a-zA-Z]+$/;
+    return textExp.test(element);
+}
+console.log(typeof(testValue))//function
+
+var result = animals.every(testValue);
+console.log(result); // false
+
+// without ** sign all are letter and string
+var animals2 = new Array("cat","dog", "hen", "cat", "cow","elephant","horse","lion");
+var result2 = animals2.every(testValue);
+console.log(result2); //true
