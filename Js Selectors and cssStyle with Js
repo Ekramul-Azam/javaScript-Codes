@@ -67,3 +67,15 @@ for (let i = 0; i < nodeList.length; i++) {
 }
 
 
+// getElementByTagName selector in Js with index number
+
+let anchor = document.getElementsByClassName('anchor');
+anchor[0].style.color = "light";
+anchor[1].style.color = "gold";
+anchor[2].style.color = "white";
+anchor[0].style.backgroundColor = "green";
+anchor[1].style.backgroundColor = "black";
+anchor[2].style.backgroundColor = "#40d";
+
+
+
