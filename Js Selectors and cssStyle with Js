@@ -1,1 +1,69 @@
-# javaScript-Codes
+# index.html codes:
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_cookbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div  id="div">
+        <p>20</p>
+        10
+        <button type="button">Click Me</button>
+    </div>
+
+    <div  id="div">
+       <a href="#" class="anchor">This is my link1</a> <br/>
+       <a href="#" class="anchor">This is my link2</a> <br/>
+       <a href="#" class="anchor">This is my link3</a>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+## index.js code:::
+
+
+//selectors in Js and css style with javaScript 
+
+var doc_div = document.getElementById('div');
+doc_div.style.backgroundColor = "blue";
+doc_div.style.color = "#fff";
+doc_div.style.fontSize = "50px";
+doc_div.style.fontWeight = "700";
+doc_div.style.fontFamily = "Fantasy";
+
+var param = document.getElementsByTagName('p')[0];
+param.style.color = 'red';
+// Use getElementsByTagName with Tag and Index number ( in this case index number is must into [0/1/2 etc])
+let btn = document.getElementsByTagName('button')[0];
+btn.style.backgroundColor = "#ddd000";
+btn.style.borderRadius = "10px";
+btn.style.fontFamily = "Helvetica";
+btn.style.textTransform = "uppercase";
+btn.style.fontSize = "16px";
+btn.style.padding = "6px 10px";
+
+// select only first element with querySelector and class
+var anchor = document.querySelector('.anchor');
+anchor.style.fontSize ="20px";
+anchor.style.textDecoration ="none";
+anchor.style.color ="black";
+
+var nodeList = document.querySelectorAll('.anchor')
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].style.backgroundColor = "#8e2121";
+  nodeList[i].style.color = "#fff";
+  nodeList[i].style.padding = "5px";
+  nodeList[i].style.margin = "20px";
+}
+
+
